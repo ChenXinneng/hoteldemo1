@@ -6,15 +6,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import java.util.Map;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
 
 @Controller
 @RequestMapping("/")
 public class mainController {
 
     //service类
-    @Autowired
-    private MainService mainService;
+    //@Autowired
+    //private MainService mainService;
 
     /**
      * 进入主页面
@@ -24,6 +27,6 @@ public class mainController {
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> toHome()throws Exception{
-
+        return new HashMap<String,Object>();
     }
 }
